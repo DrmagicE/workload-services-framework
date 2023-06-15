@@ -85,7 +85,7 @@ VOLUME /var/lib/mysql
 ### docker mysql known issue https://github.com/docker-library/mysql/issues/809
 ARG RECV_VER='467B942D3A79BD29'
 ARG RECV_REPO="keyserver.ubuntu.com"
-RUN apt-key adv --keyserver keyserver.ubuntu.com --keyserver-options http-proxy=$http_proxy --recv-keys $RECV_VER
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $RECV_VER
 
 RUN \
 	apt-get update && apt-get install -y --no-install-recommends \
